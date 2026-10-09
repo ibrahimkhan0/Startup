@@ -204,12 +204,12 @@ _Verifies: Requirement 15_
 
 ## Task 17 — Checkpoint: End-to-End Check
 
-- [ ] 17.1 Run server and client together. Walk through: seed or create startups → search by partial name → filter by industry and stage → paginate → open a detail page → edit → delete → dashboard
-- [ ] 17.2 Type quickly in the search box and confirm the network tab shows one request per pause and no error flashes
-- [ ] 17.3 Stop the server and confirm the UI shows "Network error — please check your connection"
-- [ ] 17.4 Visit `/startups/abc` and `/nothing-here` and confirm both show a sensible not-found page
-- [ ] 17.5 Submit the form empty and with a bad website; confirm inline errors and that no request is sent. Then bypass the client check (curl) and confirm the server's 422 errors appear next to the right fields in the UI
-- [ ] 17.6 Run `npm run build` in `client/` and confirm it succeeds
+- [x] 17.1 Run server and client together. Walk through: seed or create startups → search by partial name → filter by industry and stage → paginate → open a detail page → edit → delete → dashboard
+- [x] 17.2 Type quickly in the search box and confirm the network tab shows one request per pause and no error flashes
+- [x] 17.3 Stop the server and confirm the UI shows "Network error — please check your connection"
+- [x] 17.4 Visit `/startups/abc` and `/nothing-here` and confirm both show a sensible not-found page
+- [x] 17.5 Submit the form empty and with a bad website; confirm inline errors and that no request is sent. Then bypass the client check (curl) and confirm the server's 422 errors appear next to the right fields in the UI
+- [x] 17.6 Run `npm run build` in `client/` and confirm it succeeds
 
 _Verifies: Requirements 12–17_
 
@@ -219,17 +219,17 @@ _Verifies: Requirements 12–17_
 
 Sections marked *(write at the end)* must be written from your real experience with Kiro, not in advance.
 
-- [ ] 18.1 Create `README.md` at the project root: project name and one-paragraph description, and a feature list (startup CRUD, search, filters, pagination, dashboard stats, validation, loading / empty / error states)
-- [ ] 18.2 Technologies used: React, Vite, Tailwind CSS v4, React Router, Node.js >= 18, Express 4, MongoDB, Mongoose, express-validator, helmet, cors, express-rate-limit, express-mongo-sanitize
-- [ ] 18.3 Setup and installation: prerequisites (Node.js >= 18, local MongoDB or an Atlas account), clone, `npm install` in `server/` and `client/`, copy both `.env.example` files to `.env` and fill them in, and the Atlas option (`mongodb+srv://...` in `MONGODB_URI`); mention `npm run seed` as an optional step
-- [ ] 18.4 How to run: `npm run dev` in `server/` (port 5000) and in `client/` (port 5173), both at the same time; include the production notes `TRUST_PROXY=1` and `CLIENT_URL`
-- [ ] 18.5 API reference table for all six endpoints with query parameters, and the standard error responses
-- [ ] 18.6 Security measures section (helmet, restricted CORS, split rate limiting, 10 KB body limit, mongo sanitization, escaped search regex, field whitelisting, env-var secrets)
-- [ ] 18.7 *(write at the end)* **AI tool used:** state that Kiro was used, and how its spec workflow (requirements, design, tasks) and `.kiro/` folder were used
-- [ ] 18.8 *(write at the end)* **AI Development Experience:** what worked well, what the AI got wrong, and how you found and fixed it
-- [ ] 18.9 *(write at the end)* **3–5 specific tasks** where Kiro helped (for example component development, API creation, debugging, database integration, refactoring), each with a concrete example from your own work
-- [ ] 18.10 Known limitations: no authentication (anyone can create, edit or delete), no image uploads, no real-time updates, no automated tests unless Task 19 is completed
-- [ ] 18.11 Add screenshots of the home page, detail page, form and dashboard
+- [x] 18.1 Create `README.md` at the project root: project name and one-paragraph description, and a feature list (startup CRUD, search, filters, pagination, dashboard stats, validation, loading / empty / error states)
+- [x] 18.2 Technologies used: React, Vite, Tailwind CSS v4, React Router, Node.js >= 18, Express 4, MongoDB, Mongoose, express-validator, helmet, cors, express-rate-limit, express-mongo-sanitize
+- [x] 18.3 Setup and installation: prerequisites (Node.js >= 18, local MongoDB or an Atlas account), clone, `npm install` in `server/` and `client/`, copy both `.env.example` files to `.env` and fill them in, and the Atlas option (`mongodb+srv://...` in `MONGODB_URI`); mention `npm run seed` as an optional step
+- [x] 18.4 How to run: `npm run dev` in `server/` (port 5000) and in `client/` (port 5173), both at the same time; include the production notes `TRUST_PROXY=1` and `CLIENT_URL`
+- [x] 18.5 API reference table for all six endpoints with query parameters, and the standard error responses
+- [x] 18.6 Security measures section (helmet, restricted CORS, split rate limiting, 10 KB body limit, mongo sanitization, escaped search regex, field whitelisting, env-var secrets)
+- [x] 18.7 *(write at the end)* **AI tool used:** state that Kiro was used, and how its spec workflow (requirements, design, tasks) and `.kiro/` folder were used
+- [x] 18.8 *(write at the end)* **AI Development Experience:** what worked well, what the AI got wrong, and how you found and fixed it
+- [x] 18.9 *(write at the end)* **3–5 specific tasks** where Kiro helped (for example component development, API creation, debugging, database integration, refactoring), each with a concrete example from your own work
+- [x] 18.10 Known limitations: no authentication (anyone can create, edit or delete), no image uploads, no real-time updates, no automated tests unless Task 19 is completed
+- [x] 18.11 Add screenshots of the home page, detail page, form and dashboard
 
 _Verifies: Requirement 19_
 

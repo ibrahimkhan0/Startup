@@ -2,8 +2,7 @@
 // The fallback uses port 5001 to match the local server configuration.
 const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api'
 
-// Removes undefined, null and empty-string values from a params object
-// before building the query string, so the URL never contains ?search=&industry=.
+
 function buildQueryString(params = {}) {
   const clean = Object.fromEntries(
     Object.entries(params).filter(([, v]) => v !== undefined && v !== null && v !== '')

@@ -1,5 +1,4 @@
 // Production guard — must be the very first thing that runs, before dotenv
-// or any database code, so there is zero chance of wiping production data.
 if (process.env.NODE_ENV === 'production') {
   console.error('ERROR: Seed script cannot run in a production environment.')
   process.exit(1)
@@ -12,10 +11,6 @@ const connectDB = require('../config/db')
 const Startup = require('../models/Startup')
 
 // 15 realistic sample startups.
-// Coverage:
-//   Industries:     Technology, Healthcare, Finance, Education, E-commerce,
-//                   SaaS, Consumer, Deep Tech, Climate Tech, Other  (all 10)
-//   Funding stages: Pre-seed, Seed, Series A, Series B+             (all 4)
 const samples = [
   {
     name: 'NovaMed AI',

@@ -12,22 +12,13 @@ const {
   deleteStartup,
 } = require('../controllers/startupController')
 
-// Import the enums and upper bound from the model so they are defined in one
-// place only. If the allowed industries ever change, updating Startup.js is
-// all that is needed — the validators update automatically.
 const Startup = require('../models/Startup')
 const { INDUSTRIES, FUNDING_STAGES, MAX_FUNDING } = Startup
 
 const router = express.Router()
 
-// ---------------------------------------------------------------------------
+
 // Validator helper — reused for every required text field.
-// .isString()  — rejects objects/arrays before any further checks (.bail()
-//               stops the chain early so we don't get redundant errors)
-// .trim()      — removes surrounding whitespace in the validated copy
-// .notEmpty()  — fails on empty string after trim
-// .isLength()  — enforces min/max character counts
-// ---------------------------------------------------------------------------
 const requiredText = (field, label, { min = 1, max }) =>
   body(field)
     .isString().withMessage(`${label} must be text`).bail()
@@ -69,17 +60,6 @@ const startupValidators = [
     .withMessage('Website must be a valid URL starting with http:// or https://'),
 ]
 
-// ---------------------------------------------------------------------------
-// Routes
-// Middleware chains run left to right. Each piece either calls next() to
-// continue, or ends the request itself (e.g. validate returns 422, then stops).
-//
-// GET /          — readLimiter → getStartups
-// GET /:id       — readLimiter → validateId → getStartupById
-// POST /         — writeLimiter → [validators] → validate → createStartup
-// PUT /:id       — writeLimiter → validateId → [validators] → validate → updateStartup
-// DELETE /:id    — writeLimiter → validateId → deleteStartup
-// ---------------------------------------------------------------------------
 router.get('/',       readLimiter, getStartups)
 router.get('/:id',    readLimiter, validateId, getStartupById)
 router.post('/',      writeLimiter, startupValidators, validate, createStartup)

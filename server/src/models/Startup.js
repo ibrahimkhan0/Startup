@@ -2,8 +2,6 @@ const mongoose = require('mongoose')
 
 // These arrays are defined here and exported so the validators in
 // startupRoutes.js and the seed script can import the same values.
-// This means the enums are defined in one place only — changing them
-// here automatically updates both the schema and the validators.
 const INDUSTRIES = [
   'Technology',
   'Healthcare',

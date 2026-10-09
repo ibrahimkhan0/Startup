@@ -1,8 +1,6 @@
 const rateLimit = require('express-rate-limit')
 
 // A shared handler so both limiters return the same JSON shape.
-// express-rate-limit's default response is plain text — we override it
-// so the client always gets { message: '...' } just like every other error.
 const handler = (req, res) =>
   res.status(429).json({ message: 'Too many requests, please try again later' })
 
