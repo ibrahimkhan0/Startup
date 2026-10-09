@@ -1,7 +1,11 @@
 const express = require('express')
+const { readLimiter } = require('../middleware/rateLimiter')
+const { getDashboardStats } = require('../controllers/dashboardController')
+
 const router = express.Router()
 
-// Stub — real route is added in Task 6.
-// This file must exist now so app.js can require it without crashing.
+// GET /api/dashboard/stats
+// readLimiter is applied here — dashboard is a read-only, data-heavy endpoint.
+router.get('/stats', readLimiter, getDashboardStats)
 
 module.exports = router
