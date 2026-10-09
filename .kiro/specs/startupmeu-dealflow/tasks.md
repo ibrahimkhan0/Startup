@@ -6,7 +6,7 @@ Work through the tasks in order. Implement **one top-level task at a time** and 
 
 ## Task 1 — Server: Project Scaffold & Environment
 
-- [ ] 1.1 Create `server/` with sub-folders `src/config`, `src/models`, `src/controllers`, `src/routes`, `src/middleware`
+- [x] 1.1 Create `server/` with sub-folders `src/config`, `src/models`, `src/controllers`, `src/routes`, `src/middleware`
 - [ ] 1.2 Run `npm init -y` in `server/`. Install `express@4` (pinned to major version 4), then `mongoose`, `dotenv`, `helmet`, `cors`, `express-rate-limit`, `express-mongo-sanitize`, `express-validator`. Install `nodemon` as a dev dependency. Do NOT add `"type": "module"`; the server uses CommonJS.
 - [ ] 1.3 Add scripts to `server/package.json`: `"start": "node server.js"` and `"dev": "nodemon server.js"`
 - [ ] 1.4 Create `server/.env.example` with placeholders for `PORT`, `MONGODB_URI`, `NODE_ENV`, `CLIENT_URL` and an empty `TRUST_PROXY` (with a comment that it is set to `1` only behind a reverse proxy)
