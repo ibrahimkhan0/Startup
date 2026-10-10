@@ -17,8 +17,6 @@ const app = require('./src/app')
 const PORT = process.env.PORT || 5000
 
 // start() is an async function so we can await the DB connection before
-// calling app.listen. Express 4 does not support top-level await, so we
-// define and immediately call an async function here.
 async function start() {
   await connectDB()
   app.listen(PORT, () => {
